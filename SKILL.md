@@ -1,7 +1,7 @@
 ---
-name: rednote-bootstrap-skill
+name: search-first-rednote-bootstrap
 description: >
-  小红书自动化账号运营，包括日常互动养号、
+  基于内容检索的小红书自动化账号运营skill，通过广泛搜罗小红书的内容，构建出可复用的小红书运营skill；应对时刻变化的账号运营需求，持续更新skill流程、细节，形成个性化的账号运营技能包。预置了日常互动养号、赛道竞品分析、内容生成、运营数据分析等基础能力。
 ---
 
 # content-researcher
