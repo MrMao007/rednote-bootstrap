@@ -1,7 +1,10 @@
 ---
-name: rednote-bootstrap-skill
+name: research-and-new-workflow
 description: >
-  小红书自动化账号运营，包括日常互动养号、
+  内容平台自进化研究 Skill。根据用户关心的主题，自动在内容平台（小红书）上
+  生成搜索词、检索并阅读大量笔记内容，通过自适应深度控制提炼核心洞察，最终生成一个
+  可复用的子 Skill（SKILL.md）。主 Skill 维护所有已生成子 Skill 的注册表，
+  实现"研究一次，复用多次"的知识自进化。
 ---
 
 # content-researcher
