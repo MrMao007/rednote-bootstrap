@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "description": "content-researcher 子 Skill 注册表，自动维护",
+  "last_updated": "2026-04-13",
+  "skills": [
+    {
+      "id": "xiaohongshu-prohibited-words",
+      "topic": "小红书违禁词检测机制",
+      "keywords": ["违禁词", "敏感词", "限流", "违规检测", "内容审核", "隐形限流", "CS评分", "小红书运营"],
+      "path": "generated-skills/xiaohongshu-prohibited-words/SKILL.md",
+      "platform": "xiaohongshu",
+      "created_at": "2026-04-13",
+      "updated_at": "2026-04-13",
+      "research_depth": "standard",
+      "notes_analyzed": 8,
+      "dimensions_covered": ["违禁词分类", "检测技术原理", "隐形限流机制", "自查方法工具", "CS评分系统"],
+      "confidence": "high",
+      "summary": "涵盖违禁词七大分类、检测机制原理、隐形限流、自查方法和推荐工具，包含3个可执行工作流"
+    }
+  ]
+}
