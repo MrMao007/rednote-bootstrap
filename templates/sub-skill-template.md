@@ -6,7 +6,6 @@ description: >
   平台来源：{{PLATFORM}}
   生成时间：{{CREATED_AT}}
   研究深度：{{RESEARCH_DEPTH}}（分析了 {{NOTES_COUNT}} 篇内容）
-allowed-tools: Bash(agent-browser:*), Read, Write, WebSearch, WebFetch
 ---
 
 # {{TOPIC}}

@@ -1,5 +1,5 @@
 ---
-name: research-and-new-workflow
+name: search-first-workflow
 description: >
   内容平台自进化研究 Skill。根据用户关心的主题，自动在内容平台（小红书）上
   生成搜索词、检索并阅读大量笔记内容，通过自适应深度控制提炼核心洞察，最终生成一个
@@ -7,7 +7,7 @@ description: >
   实现"研究一次，复用多次"的知识自进化。
 ---
 
-# content-researcher
+# search-first-workflow
 
 内容平台自进化研究 Skill —— 把"刷内容"变成"长知识"。
 
