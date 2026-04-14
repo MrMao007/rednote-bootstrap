@@ -15,8 +15,11 @@ dependency: agent-browser
 rednote-bootstrap/
 ├── SKILL.md                    # 本文件，主入口
 ├── registry.json               # 子 Skill 注册表（自动维护）
-├── references/
-│   └── platforms.md            # 平台适配配置
+├── LICENSE
+├── reference/                  # 参考知识库
+│   ├── platforms.md            # 平台适配配置
+│   ├── search-first-skill.md   # 搜索优先的子 Skill 生成流程
+│   └── agent-browser/          # 浏览器自动化 Skill（依赖）
 ├── templates/
 │   └── sub-skill-template.md   # 子 Skill 生成模板
 └── generated-skills/           # 生成的子 Skill 存放目录
