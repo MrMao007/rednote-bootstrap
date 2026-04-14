@@ -1,11 +1,9 @@
 ---
 name: {{SKILL_ID}}
-description: >
-  基于内容平台研究自动生成的领域专家 Skill。
-  主题：{{TOPIC}}
-  平台来源：{{PLATFORM}}
-  生成时间：{{CREATED_AT}}
-  研究深度：{{RESEARCH_DEPTH}}（分析了 {{NOTES_COUNT}} 篇内容）
+description: {{DESCRIPTION}}
+topic: {{TOPIC}}
+createdAt: {{CREATED_AT}}
+researchDepth: {{RESEARCH_DEPTH}}（分析了 {{NOTES_COUNT}} 篇内容）
 ---
 
 # {{TOPIC}}

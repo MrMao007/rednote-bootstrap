@@ -1,6 +1,6 @@
 # 平台适配配置
 
-本文件定义 content-researcher 支持的内容平台及其特定的交互模式。
+本文件定义 rednote-bootstrap 支持的内容平台及其特定的交互模式。
 
 ## 小红书 (xiaohongshu)
 
