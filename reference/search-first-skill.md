@@ -13,11 +13,13 @@
 ## 文件结构
 
 ```
-content-researcher/
+rednote-bootstrap/
 ├── SKILL.md                    # 本文件，主入口
 ├── registry.json               # 子 Skill 注册表（自动维护）
-├── references/
-│   └── platforms.md            # 平台适配配置
+├── reference/                  # 参考知识库
+│   ├── platforms.md            # 平台适配配置
+│   ├── search-first-skill.md   # 搜索优先的子 Skill 生成流程
+│   └── agent-browser/          # 浏览器自动化 Skill（依赖）
 ├── templates/
 │   └── sub-skill-template.md   # 子 Skill 生成模板
 └── generated-skills/           # 生成的子 Skill 存放目录
@@ -27,21 +29,6 @@ content-researcher/
 ```
 
 ## 工作流程
-
-### Phase 0：路由检查
-
-在执行任何研究前，先检查 `registry.json` 是否已有匹配的子 Skill：
-
-```bash
-# 读取注册表
-cat content-researcher/registry.json
-```
-
-匹配规则：
-- 精确匹配：用户主题与已有子 Skill 的 `topic` 完全一致
-- 模糊匹配：用户主题被已有子 Skill 的 `keywords` 覆盖超过 70%
-- 如果匹配到，直接加载对应子 Skill 并执行，跳过后续研究流程
-- 如果部分匹配，提示用户可基于已有子 Skill 增量更新
 
 ### Phase 1：主题分析与搜索词生成
 
@@ -80,14 +67,16 @@ agent-browser skills get agent-browser
 
 **2.1 平台登录**
 
-优先使用已保存的 session：
 ```bash
+# 首次登录（需要用户扫码）
 agent-browser --headed --session-name xiaohongshu open "https://www.xiaohongshu.com"
-```
-
-如无可用 session，需引导用户扫码登录后保存：
-```bash
+# 等待用户扫码后保存状态
 agent-browser state save ./xhs-auth-state.json
+
+# 后续复用
+agent-browser --headed --session-name xiaohongshu open "about:blank"
+agent-browser state load ./xhs-auth-state.json
+agent-browser open "https://www.xiaohongshu.com"
 ```
 
 **2.2 搜索与采集循环**
@@ -185,8 +174,9 @@ ELSE:
 **生成子 Skill：**
 ```bash
 # 子 Skill 保存路径
-content-researcher/generated-skills/{topic-name-in-english}/SKILL.md
+{skill_dir}/rednote-bootstrap/generated-skills/{topic-name-in-english}/SKILL.md
 ```
+**注意：** `{skill_dir}` 需要替换为本技能的实际安装目录，即 SKILL.md 所在的目录。
 
 子 Skill 必须遵循 `templates/sub-skill-template.md` 的结构（见模板文件）。
 
@@ -201,7 +191,7 @@ content-researcher/generated-skills/{topic-name-in-english}/SKILL.md
       "id": "xiaohongshu-prohibited-words",
       "topic": "小红书违禁词检测机制",
       "keywords": ["违禁词", "敏感词", "限流", "违规检测", "内容审核"],
-      "path": "generated-skills/小红书违禁词检测/SKILL.md",
+      "path": "generated-skills/{topic-name-in-english}/SKILL.md",
       "platform": "xiaohongshu",
       "created_at": "2026-04-13",
       "updated_at": "2026-04-13",
@@ -216,7 +206,7 @@ content-researcher/generated-skills/{topic-name-in-english}/SKILL.md
 
 并在终端向用户确认：
 ```
-✅ 子 Skill 已生成：generated-skills/小红书违禁词检测/SKILL.md
+✅ 子 Skill 已生成：generated-skills/{topic-name-in-english}/SKILL.md
 📊 本次研究：分析了 12 篇笔记，覆盖 5 个维度，置信度：高
 🔗 已注册到导航表，后续可直接调用
 ```
