@@ -1,8 +1,33 @@
 {
   "version": "1.0",
   "description": "rednote-bootstrap 子 Skill 注册表，自动维护",
-  "last_updated": "2026-04-13",
+  "last_updated": "2026-04-23",
   "skills": [
-    
+    {
+      "id": "xiaohongshu-publishing-guide",
+      "topic": "小红书发布流程及注意事项",
+      "keywords": ["发布流程", "发布笔记", "注意事项", "审核规则", "限流", "发布时间", "新手教程", "CES评分", "AI标注", "违禁词"],
+      "path": "generated-skills/xiaohongshu-publishing-guide/SKILL.md",
+      "platform": "xiaohongshu",
+      "created_at": "2026-04-23",
+      "updated_at": "2026-04-23",
+      "research_depth": "standard",
+      "notes_analyzed": 6,
+      "confidence": "high",
+      "summary": "涵盖发布前准备、七步发布法、2026年审核机制（AI标注/原创保护/导流红线）、CES评分系统、各赛道黄金发布时间表、20个限流危险行为、发布后运营要点"
+    },
+    {
+      "id": "xiaohongshu-daily-account-nurturing",
+      "topic": "小红书日常养号流程",
+      "keywords": ["养号", "日常养号", "起号", "账号权重", "五边形", "伤号行为", "限流", "新号养号", "僵尸号", "互动", "活跃度", "养号禁忌", "七天养号"],
+      "path": "generated-skills/xiaohongshu-daily-account-nurturing/SKILL.md",
+      "platform": "xiaohongshu",
+      "created_at": "2026-04-23",
+      "updated_at": "2026-04-23",
+      "research_depth": "standard",
+      "notes_analyzed": 4,
+      "confidence": "high",
+      "summary": "涵盖养号基本原理与五边形体系、新号7天养号周期与阶段规划、日常互动行为规范、八大伤号禁忌、效果判断标准、各赛道最佳发布时间表、僵尸号复活流程"
+    }
   ]
 }
