@@ -8,7 +8,7 @@ researchDepth: {{RESEARCH_DEPTH}}（分析了 {{NOTES_COUNT}} 篇内容）
 
 # {{TOPIC}}
 
-> 本 Skill 由 content-researcher 自动生成于 {{CREATED_AT}}
+> 本 Skill 由 rednote-bootstrap 自动生成于 {{CREATED_AT}}
 > 信息来源：{{PLATFORM}} 平台 {{NOTES_COUNT}} 篇内容的交叉验证
 > 置信度：{{CONFIDENCE}}
 > 上次更新：{{UPDATED_AT}}
@@ -89,4 +89,4 @@ researchDepth: {{RESEARCH_DEPTH}}（分析了 {{NOTES_COUNT}} 篇内容）
 
 ---
 
-*本 Skill 由 content-researcher 主 Skill 自动生成。如需更新，请要求 content-researcher 对主题 "{{TOPIC}}" 进行增量研究。*
+*本 Skill 由 rednote-bootstrap 主 Skill 自动生成。如需更新，请要求 rednote-bootstrap 对主题 "{{TOPIC}}" 进行增量研究。*
