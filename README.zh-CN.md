@@ -12,7 +12,7 @@
 # rednote-bootstrap
 
 <p align="center">
-  <img src="./logo.png" alt="rednote-bootstrap Logo" width="800" />
+  <img src="https://github.com/user-attachments/assets/65762b1d-f8e9-45a9-8ac7-f9ebad682037" alt="rednote-bootstrap Logo" width="800" />
 </p>
 
 **一个会自我进化的小红书运营 Agent Skill。**
