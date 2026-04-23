@@ -12,7 +12,7 @@
 # rednote-bootstrap
 
 <p align="center">
-  <img src="./logo.png" alt="rednote-bootstrap Logo" width="200" />
+  <img src="./logo.png" alt="rednote-bootstrap Logo" width="800" />
 </p>
 
 **A self-evolving Agent Skill for XiaoHongShu (REDnote) operations.**
