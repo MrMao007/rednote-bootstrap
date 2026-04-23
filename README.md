@@ -11,6 +11,10 @@
 
 # rednote-bootstrap
 
+<p align="center">
+  <img src="./logo.png" alt="rednote-bootstrap Logo" width="200" />
+</p>
+
 **A self-evolving Agent Skill for XiaoHongShu (REDnote) operations.**
 
 rednote-bootstrap is not another static "operations guide" — it is a living knowledge system. Every time you ask a new operations question, it automatically opens a browser, searches real posts on XiaoHongShu, reads image-heavy content through visual understanding, cross-validates information across multiple sources, and distills everything into a reusable sub-Skill. The next time you ask a similar question, it responds instantly from its knowledge base — no repeated research needed.

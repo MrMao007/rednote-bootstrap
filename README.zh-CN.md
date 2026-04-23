@@ -11,6 +11,10 @@
 
 # rednote-bootstrap
 
+<p align="center">
+  <img src="./logo.png" alt="rednote-bootstrap Logo" width="200" />
+</p>
+
 **一个会自我进化的小红书运营 Agent Skill。**
 
 rednote-bootstrap 不是又一份静态的"运营指南"——它是一个活的知识系统。每当你提出一个新的运营问题，它会自动打开浏览器、搜索小红书上的真实笔记、阅读图文内容、交叉验证信息，然后蒸馏为一个可复用的子 Skill。下次遇到同类问题，直接调用，无需重复研究。
