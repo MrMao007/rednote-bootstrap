@@ -20,13 +20,15 @@
 # 首次登录（需要用户扫码）
 agent-browser --headed --session-name xiaohongshu open "https://www.xiaohongshu.com"
 # 等待用户扫码后保存状态
-agent-browser state save ./xhs-auth-state.json
+agent-browser state save {skill_dir}/xhs-auth-state.json
 
 # 后续复用
 agent-browser --headed --session-name xiaohongshu open "about:blank"
-agent-browser state load ./xhs-auth-state.json
+agent-browser state load {skill_dir}/xhs-auth-state.json
 agent-browser open "https://www.xiaohongshu.com"
 ```
+
+**注意：** `{skill_dir}` 需要替换为本技能的实际安装目录，即 SKILL.md 所在的目录。
 
 ### DOM 交互模式
 

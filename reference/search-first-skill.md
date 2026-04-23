@@ -2,6 +2,16 @@
 
 内容平台自进化研究 Skill。根据用户关心的主题，自动在小红书上生成搜索词、检索并阅读大量笔记内容，通过自适应深度控制提炼核心洞察，最终生成一个可复用的子 Skill（SKILL.md）。主 Skill 维护所有已生成子 Skill 的注册表，实现"研究一次，复用多次"的知识自进化。
 
+## 依赖
+
+agent-browser，基于此进行浏览器自动化操作
+
+### 注意事项
+
+- 所有浏览器操作**必须通过 agent-browser 执行，严格参考`./reference/platfroms.md`的指南执行**。
+- 小红书的内容主要在图片中，需要结合截图 + OCR 阅读
+- 所有浏览器操作都**必须保证在登录态下执行**
+
 ## 核心理念
 
 ```
@@ -71,13 +81,17 @@ agent-browser skills get agent-browser
 # 首次登录（需要用户扫码）
 agent-browser --headed --session-name xiaohongshu open "https://www.xiaohongshu.com"
 # 等待用户扫码后保存状态
-agent-browser state save ./xhs-auth-state.json
+agent-browser state save {skill_dir}/xhs-auth-state.json
 
 # 后续复用
 agent-browser --headed --session-name xiaohongshu open "about:blank"
-agent-browser state load ./xhs-auth-state.json
+agent-browser state load {skill_dir}/xhs-auth-state.json
 agent-browser open "https://www.xiaohongshu.com"
 ```
+
+**注意：** `{skill_dir}` 需要替换为本技能的实际安装目录，即 SKILL.md 所在的目录。
+
+> 当发现用户未登录小红书时，截图需要登录的界面发送给用户，并要求用户扫码登录。
 
 **2.2 搜索与采集循环**
 
